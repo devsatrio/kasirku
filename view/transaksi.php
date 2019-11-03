@@ -5,7 +5,8 @@ include '../php/koneksi.php';
 if($_SESSION['username']==''){
   echo "<script>window.alert('Maaf, Anda Harus Login'); window.location=('../index.php')</script>";
 } 
-include 'layout/h.php';
+include 'layout/h_transaksi.php';
+include 'layout/n.php';
 ?>
     <div id="content">
       <div id="content-header">
@@ -18,6 +19,7 @@ include 'layout/h.php';
       <div class="container-fluid">
         <div class="row-fluid">
           <div class="span6">
+            <div class="loading-div" id="panelnya">
             <div class="widget-box">
               <div class="widget-title">
                 <span class="icon">
@@ -26,17 +28,20 @@ include 'layout/h.php';
                 <h5>Tambah Transaksi</h5>
               </div>
               <div class="widget-content">
+                
               <div class="form-horizontal">
                 <div class="control-group">
                 <label class="control-label">Kode Transaksi :</label>
                 <div class="controls">
-                  <input type="text" class="span11" readonly>
+                  <input type="text" class="span11" id="kode" readonly>
                 </div>
               </div>
               <div class="control-group">
-                <label class="control-label">Cari Barang :</label>
+                <label class="control-label">Cari Barang</label>
                 <div class="controls">
-                  <input type="text" class="span11">
+                  <select id="cari_barang">
+                    <option value="">asdf</option>
+                  </select>
                 </div>
               </div>
               <div class="control-group">
@@ -63,6 +68,7 @@ include 'layout/h.php';
               </div>
             </div>
               </div>
+            </div>
             </div>
           </div>
           <div class="span6">

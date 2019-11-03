@@ -6,6 +6,7 @@ if($_SESSION['username']==''){
   echo "<script>window.alert('Maaf, Anda Harus Login'); window.location=('../index.php')</script>";
 } 
 include 'layout/h.php';
+include 'layout/n.php';
 ?>
     <div id="content">
       <div id="content-header">
