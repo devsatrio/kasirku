@@ -1,10 +1,21 @@
- <script src="../assets/js/jquery.min.js"></script>
- <script src="../assets/js/jquery.ui.custom.js"></script>
- <script src="../assets/js/bootstrap.min.js"></script>
- <script src="../assets/js/select2.min.js"></script> 
- <script src="../assets/js/maruti.js"></script>
- <script src="../assets/js/loading.js"></script>
- <script src="../assets/js/transaksi.js"></script>
-  </body>
+<!-- /.container-fluid -->
+</div>
+<!-- End of Main Content -->
 
+</div>
+<!-- End of Content Wrapper -->
+</div>
+<!-- End of Page Wrapper -->
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+<i class="fas fa-angle-up"></i>
+</a>
+<!-- Bootstrap core JavaScript-->
+<script src="../assets/vendor/jquery/jquery.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Custom scripts for all pages-->
+<script src="../assets/js/sb-admin-2.min.js"></script>
+</body>
 </html>
