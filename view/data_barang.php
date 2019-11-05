@@ -5,7 +5,7 @@ include '../php/koneksi.php';
 if($_SESSION['username']==''){
 echo "<script>window.alert('Maaf, Anda Harus Login'); window.location=('../index.php')</script>";
 }
-include 'layout/h.php';
+include 'layout/h_tabel.php';
 include 'layout/n.php';
 ?>
 <div class="container-fluid">
@@ -19,7 +19,7 @@ include 'layout/n.php';
           </h6>
         </div>
         <div class="card-body">
-          <table class="table table-bordered data-table">
+          <table class="table table-bordered data-table" id="dataTable">
             <thead>
               <tr>
                 <th>No</th>
@@ -112,5 +112,5 @@ while($row2=mysqli_fetch_assoc($query2)) { ?>
 </div>
 <?php } ?>
 <?php
-include'layout/f.php';
+include'layout/f_tabel.php';
 ?>
