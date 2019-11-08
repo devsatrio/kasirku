@@ -71,20 +71,51 @@ include 'layout/n.php';
             <tbody id="tubuh">
             </tbody>
             <tfoot>
-              <tr>
-                <td colspan="5" class="text-right">total</td>
-                <td class="text-right">0</td>
-              </tr>
-              <tr>
-                <td colspan="5" class="text-right">Potongan</td>
-                <td class="text-right">0</td>
-              </tr>
-              <tr>
-                <td colspan="5" class="text-right"><b>Total Akhir</b></td>
-                <td class="text-right"><b>0</b></td>
-              </tr>
+            <tr>
+              <td colspan="5" class="text-right">total</td>
+              <td class="text-right" id="total">Rp. 0</td>
+            </tr>
+            <tr>
+              <td colspan="5" class="text-right">Potongan</td>
+              <td class="text-right" id="potongannya">Rp. 0</td>
+            </tr>
+            <tr>
+              <td colspan="5" class="text-right"><b>Total Akhir</b></td>
+              <td class="text-right"><b id="totalakhir">Rp. 0</b></td>
+            </tr>
+            <tr>
+              <td colspan="5" class="text-right"><b>Dibayar</b></td>
+              <td class="text-right"><b id="dibayar">Rp. 0</b></td>
+            </tr>
+            <tr>
+              <td colspan="5" class="text-right"><b>Kembalian</b></td>
+              <td class="text-right"><b id="kembalian">Rp. 0</b></td>
+            </tr>
             </tfoot>
           </table>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="email">Potongan</label>
+                <input type="number" value="0" min="0" class="form-control" id="potongan" onchange="hitungtotal()">
+                <input type="hidden" id="totalnya">
+                <input type="hidden" id="totalakhirnya">
+                <input type="hidden" id="kembaliannya">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="email">Dibayar</label>
+                <input type="number" min="0" class="form-control" id="dibayarnya" onchange="hitungkembalian()">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-actions text-center">
+                <button type="button" id="simpancetak" class="btn btn-primary btn-large">Simpan & Cetak</button>
+                <button type="button" id="selesaitransaksi" class="btn btn-success btn-large">Selesai</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
