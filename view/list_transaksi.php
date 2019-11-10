@@ -70,8 +70,10 @@ include 'layout/n.php';
                   data-total="<?php echo $row['total']?>"
                   data-dibayar="<?php echo $row['dibayar']?>"
                   data-kembali="<?php echo $row['kembali']?>"><i class="fa fa-eye"></i></button>
+                  <?php if($_SESSION['level']!='Admin'){?>
                   <a href="../php/aksi_hapustransaksi.php?id=<?php echo $row[id];?>" class="btn btn-sm btn-danger" onclick="return confirm('Hapus data ?')"><i class="fa fa-trash"></i>
                   </a>
+                <?php }?>
                 </td>
               </tr>
               <?php } ?>

@@ -18,11 +18,13 @@
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
         </li>
+        <?php if($_SESSION['level']!='Admin'){?>
         <li class="nav-item">
           <a class="nav-link" href="data_user.php">
             <i class="fas fa-fw fa-users"></i>
             <span>User</span></a>
           </li>
+          <?php } ?>
           <li class="nav-item">
             <a class="nav-link" href="data_barang.php">
               <i class="fas fa-fw fa-th-large"></i>
@@ -38,6 +40,7 @@
                   <i class="fas fa-fw fa-list-alt"></i>
                   <span>List Transaksi</span></a>
                 </li>
+                <?php if($_SESSION['level']!='Admin'){?>
                 <li class="nav-item">
                   <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-file"></i>
@@ -47,10 +50,11 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                       <h6 class="collapse-header">Jenis Laporan:</h6>
                       <a class="collapse-item" href="laporan_transaksi.php">Transaksi</a>
-                      <a class="collapse-item" href="cards.html">Detail Transaksi</a>
+                      <a class="collapse-item" href="laporan_detailtransaksi.php">Detail Transaksi</a>
                     </div>
                   </div>
                 </li>
+              <?php } ?>
                 <!-- Divider -->
                 <hr class="sidebar-divider d-none d-md-block">
                 <!-- Sidebar Toggler (Sidebar) -->

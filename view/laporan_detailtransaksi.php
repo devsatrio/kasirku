@@ -13,7 +13,7 @@ include 'layout/h.php';
 include 'layout/n.php';
 ?>
 <div class="container-fluid">
-	<h1 class="h3 mb-4 text-gray-800">Laporan Transaksi</h1>
+	<h1 class="h3 mb-4 text-gray-800">Laporan Detail Transaksi</h1>
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="card shadow mb-4">
@@ -21,7 +21,7 @@ include 'layout/n.php';
 					<h6 class="m-0 font-weight-bold text-primary">Pilih Data</h6>
 				</div>
 				<div class="card-body">
-					<form action="tampil_laporan_transaksi.php" method="post">
+					<form action="tampil_laporan_detailtransaksi.php" method="post">
 						<div class="form-group">
 							<label for="email">Tanggal Mulai</label>
 							<input type="date" class="form-control" name="tglsatu" required>

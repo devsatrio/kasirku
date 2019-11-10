@@ -3,7 +3,12 @@ error_reporting(0);
 session_start();
 include '../php/koneksi.php';
 if($_SESSION['username']==''){
-echo "<script>window.alert('Maaf, Anda Harus Login'); window.location=('../index.php')</script>";}
+echo "<script>window.alert('Maaf, Anda Harus Login'); window.location=('../index.php')</script>";
+}else{
+  if ($_SESSION['level']=='Admin') {
+   echo "<script>window.alert('Maaf, Anda Tidak Punya Akses'); window.location=('../index.php')</script>";
+  }
+}
 include 'layout/h.php';
 include 'layout/n.php'; ?>
 <div class="container-fluid">
@@ -83,9 +88,14 @@ include 'layout/n.php'; ?>
                 <div class="form-group">
                   <label for="email">Status</label>
                   <select name="status" class="form-control">
+                    <?php if($_SESSION['level']!='Programmer'){?>
+                    <option value="Admin">Admin</option>
+                    <option value="Super Admin">Super Admin</option>
+                    <?php }else{?>
                     <option value="Admin">Admin</option>
                     <option value="Super Admin">Super Admin</option>
                     <option value="Programmer">Programmer</option>
+                    <?php }?>
                   </select>
                 </div>
                 <div class="form-group">
@@ -142,9 +152,14 @@ while($row2=mysqli_fetch_assoc($query2)) { ?>
           <div class="form-group">
             <label for="email">Status</label>
             <select name="status" class="form-control">
+              <?php if($_SESSION['level']!='Programmer'){?>
+              <option value="Admin" <?php if($row2['status']=='Admin'){ echo "selected";}?>>Admin</option>
+              <option value="Super Admin" <?php if($row2['status']=='Super Admin'){ echo "selected";}?>>Super Admin</option>
+            <?php }else{?>
               <option value="Admin" <?php if($row2['status']=='Admin'){ echo "selected";}?>>Admin</option>
               <option value="Super Admin" <?php if($row2['status']=='Super Admin'){ echo "selected";}?>>Super Admin</option>
               <option value="Programmer" <?php if($row2['status']=='Programmer'){ echo "selected";}?>>Programmer</option>
+            <?php }?>
             </select>
           </div>
           <div class="form-group">
